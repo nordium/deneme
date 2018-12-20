@@ -1,0 +1,22 @@
+#include<stdio.h>
+#define N 5
+
+void histogram(int array[],int size)
+{
+    int i,temp;
+
+    for(i=0; i<size; i++)
+    {
+        temp=array[i];
+        for(int a=1; a<=temp; a++)
+            printf("*");
+        printf("\n");
+    }
+}
+
+int main()
+{
+    int arr[N]={4,8,6,3,2};
+
+    histogram(arr,N);
+}
