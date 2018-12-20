@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+void square(int arr[],int size)
+{
+    int i,sqr;
+    for(i=0; i<size; i++)
+    {
+        sqr=arr[i]*arr[i];
+        printf("%d\t",sqr);
+        sqr=0;
+    }
+}
+int main()
+{
+    int s;
+    printf("enter size:");scanf("%d",&s);
+    int a[s];
+
+    srand(time(NULL));
+    for(int i=0; i<s; i++)
+        a[i]=-10+rand()%+20;
+
+    printf("your array:\t");
+    for(int i=0; i<s; i++)
+        printf("%d\t",a[i]);
+
+    printf("\nsquared array:\t");
+    square(a,s);
+}
