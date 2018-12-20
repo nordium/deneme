@@ -1,0 +1,36 @@
+#include<stdio.h>
+
+void read_arr(char arr[],int size)
+{
+    int i;
+    for(i=0; i<size; i++)
+        scanf("%c",&arr[i]);
+}
+
+void reverse(char arr[],int size)
+{
+    for(; size>=0; size--)
+        printf("%c",arr[size]);
+}
+
+void display(char arr[],int size)
+{
+    int i;
+    for(i=0; i<size; i++)
+        printf("%c",arr[i]);
+}
+
+int main()
+{
+    int len;
+    printf("enter size: ");scanf("%d",&len);
+    char a[len];
+    read_arr(a,len);
+    display(a,len);
+    printf("\n");
+    reverse(a,len);
+
+}
+
+
+
